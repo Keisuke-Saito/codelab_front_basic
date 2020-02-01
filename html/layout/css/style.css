@@ -1,0 +1,26 @@
+@charset "utf-8";
+body {
+  background: #f0f8ff;
+}
+* {
+  box-sizing: border-box;
+}
+.wrap {
+  max-width: calc(1280/1920*100%);
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+}
+.header {
+  background: #e6e6fa;
+  padding: 50px 0;
+}
+.main {
+  background: #fa8072;
+  height: 600px;
+  line-height: 600px;
+}
+.footer {
+  background: #add8e6;
+  padding: 50px 0;
+}
