@@ -1,0 +1,41 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #f0f8ff;
+}
+* {
+  box-sizing: border-box;
+}
+.wrap {
+  max-width: calc(1280/1920*100%);
+  margin: 50px auto;
+  font-size: 2rem;
+  text-align: center;
+}
+.header {
+  background: #e6e6fa;
+  padding: 5rem 0;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.menu {
+  float: left;
+  background-color: #ffc;
+  width: 180px;
+  height: 250px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  border: 1px solid #000;
+}
+
+.footer {
+  background: #add8e6;
+  padding: 5rem 0;
+}
