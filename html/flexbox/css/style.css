@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #111111;
+}
+
+.wrap {
+  width: 1040px;
+  margin: 50px auto;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.flex {
+  margin-bottom: 100px;
+  background: #ccc;
+}
+
+.flex li {
+  height: 200px;
+  width: 200px;
+  background: #e0dace;
+  text-align: center;
+  line-height: 200px;
+  border: 1px solid #eee;
+}
+
+.flex li:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* 問題はここから */
+
+/* 問題1.要素を横並びにしてください。 */
+.flex {
+  display: flex;
+}
+
+/* 問題2.要素をHTMLを変えずに逆に並ぶようにしてください。 */
+.flex2 {
+  flex-direction: row-reverse;
+}
+.flex2 li:not(:last-child) {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+/* 問題3.要素を両端に配置してください。 */
+.flex3 {
+  justify-content: space-between;
+}
+
+/* 問題4.item17で折り返してください。 */
+.flex4 {
+  flex-wrap: wrap;
+}
+.flex4 li:nth-child(5) {
+  margin: 0;
+}
+.flex4 li:last-child {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 問題5.要素を水平、垂直方向に中央揃えしてください。 */
+.flex5 {
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+}
