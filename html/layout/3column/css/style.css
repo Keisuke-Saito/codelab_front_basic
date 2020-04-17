@@ -1,0 +1,42 @@
+@charset "utf-8";
+body {
+  background: #f0f8ff;
+}
+* {
+  box-sizing: border-box;
+}
+.wrap {
+  max-width: calc(1280/1920*100%);
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+}
+.header {
+  background: #e6e6fa;
+  padding: 50px 0;
+}
+.flex {
+  display: flex;
+}
+.main {
+  background: #fa8072;
+  width: 60%;
+  height: 600px;
+  line-height: 600px;
+}
+.side {
+  width: 20%;
+  height: 600px;
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+.menu1 {
+  background: #ffc;
+}
+.menu2 {
+  background: #8eb8ff;
+}
+.footer {
+  background: #add8e6;
+  padding: 50px 0;
+}
