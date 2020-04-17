@@ -1,0 +1,31 @@
+@charset "utf-8";
+body {
+  background: #f0f8ff;
+}
+* {
+  box-sizing: border-box;
+}
+.wrap {
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 0px;
+  text-align: center;
+}
+.nav {
+  display: inline-block;
+  vertical-align: middle;
+  background: #966;
+  padding: 0 100px;
+  font-size: 20px;
+}
+.column {
+  display: inline-block;
+  vertical-align: middle;
+  width:50%;
+  background: #3CB371;
+  font-size: 20px;
+}
+.footer {
+  background: #add8e6;
+  padding: 50px 0;
+}
