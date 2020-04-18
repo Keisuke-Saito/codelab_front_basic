@@ -1,0 +1,85 @@
+.wrap {
+  padding: 60px 100px;
+  background: #eee;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.q {
+  background: #fff;
+  margin-bottom: 80px;
+  padding: 10px;
+}
+
+.q:last-child {
+  margin-bottom: 0;
+}
+
+.q li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.q a {
+  display: block;
+  background: rgb(103, 190, 240);
+  color: #ffffff;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+}
+
+.q .box {
+  width: 100px;
+  height: 100px;
+  background: rgb(216, 205, 205);
+}
+
+/* 問題1.　ユニバーサルセレクタ(全称セレクタ)を用い、全ての要素に対して「box-sizing: border-box;」を指定しましょう。 */
+* {
+  box-sizing: border-box;
+}
+
+/* 問題2.　隣接セレクタを使い、ボーダーを付けてみましょう。 */
+.q2 li + li{
+  border-left: 1px solid #000;
+}
+
+/* 問題3.　最初の要素だけフォントの色(色は「rgb(224, 105, 105)」)を変えてみましょう。 */
+.q3 li:first-child {
+  color: rgb(224,105,105);
+}
+
+/* 問題4.　最後の要素だけフォントの太さを変えてみましょう。 */
+.q4 li:last-child {
+  font-weight: bold;
+}
+
+/* 問題5. 偶数番目のliの背景色(rgb(236, 231, 231))を変えてみましょう。 */
+.q5 li:nth-child(even) {
+  background: rgb(236,231,231);
+}
+
+/* 問題6. 奇数番目のliの先頭に星マーク付けてみましょう。(疑似要素beforeを使うこと) */
+.q6 li:nth-child(odd)::before {
+  content: "☆"
+}
+
+/* 問題7.　下記のテキストの最初の文字だけフォントサイズ(30px)を大きくしてみましょう */
+.q7:first-letter {
+  font-size: 30px;
+}
+
+/* 問題8.　リンクをホバーしたときに、aタグのopacityを0.6に変更してください。 */
+.q8 a:hover {
+  opacity: 0.6;
+}
+
+/* 問題9.　否定セレクタを使い最後の要素以外に対して、margin-bottom: 50px;を適用してみましょう。 */
+.box:not(:last-child) {
+  margin-bottom: 50px;
+}
