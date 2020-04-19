@@ -1,0 +1,54 @@
+nav {
+  width: 600px;
+  margin: 50px auto;
+}
+
+ul {
+  display: flex;
+  background: wheat;
+}
+
+li {
+  width: 100px;
+  height: 50px;
+  background: url(../sprite.png) no-repeat;
+}
+
+li:hover {
+  transition: .3s;
+}
+
+/* 以下から記述する */
+li:nth-child(1):hover{
+  background-position: 0 -50px;
+}
+li:nth-child(2) {
+  background-position: -100px 0;
+}
+li:nth-child(2):hover{
+  background-position: -100px -50px;
+}
+li:nth-child(3) {
+  background-position: -200px 0;
+}
+li:nth-child(3):hover{
+  background-position: -200px -50px;
+}
+li:nth-child(4) {
+  background-position: -300px 0;
+}
+li:nth-child(4):hover{
+  background-position: -300px -50px;
+}
+li:nth-child(5) {
+  background-position: -400px 0;
+}
+li:nth-child(5):hover{
+  background-position: -400px -50px;
+}
+li:nth-child(6) {
+  background-position: -500px 0;
+}
+li:nth-child(6):hover{
+  background-position: -500px -50px;
+}
