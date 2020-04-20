@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+/* positionプロパティで使える値
+  static･･･初期値
+  relative･･･相対配置(元々の表示される予定からの相対配置)
+  absolute･･･絶対配置(最も近い祖先要素からの相対配置になる。また祖先要素はpotisiton:static以外を指定している必要がある)
+  fixed･･･viewportに対して相対配置
+*/
+
+.wrap {
+  width: 1000px;
+  margin: 100px auto;
+  background: rgb(233, 224, 207);
+  position: relative;
+  height: 2000px;
+}
+
+.wrap div {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* 問題1. .wrapにposition:relativeを適用させています。
+BOX1をposition relativeを使い、上に50px 左に50pxずらしてください */
+.wrap .box1 {
+  background: rgb(219, 210, 208);
+  position: relative;
+  top: -50px;
+  left: -50px;
+  z-index:2;
+}
+
+/* 問題2. BOX2をposition absoluteを使い、親要素.wrapの左上に要素を配置してください。またBOX1より下に重なるようにして下さい。*/
+.wrap .box2 {
+  background: rgb(190, 231, 247);
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+}
+
+/* 問題3. BOX３をBOX2の下50px、右50pxの位置に配置してください。またBOX2より下に重なるようにして下さい。 */
+.wrap .box3 {
+  background: rgb(247, 247, 133);
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+/* 問題4. 画面の右下に「お問い合わせはこちら」を配置してください。また、画面を縦にスクロールしても、同じ位置に入れるようにしてください。 */
+.box4 {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: rgb(228, 132, 228);
+  color: #fff;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.box5 {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 auto 100px;
+  background: rgb(243, 102, 102);
+  cursor: pointer;
+  border-radius: 5%;
+  position: relative;
+  border-bottom: solid 4px #93969c;
+  color: #fff;
+}
+
+/* 問題5. position relativeを使い、box5がactiveになった時、
+位置を上に5px、ボーダーを消して下さい　*/
+.box5:active {
+  position: relative;
+  top: 5px;
+  border-bottom: none;
+  background: #93969c;
+}
