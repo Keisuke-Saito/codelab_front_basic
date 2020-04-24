@@ -1,0 +1,23 @@
+.wrap {
+  width: calc(1280/1920*100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.main {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+table {
+  border: double #000;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
