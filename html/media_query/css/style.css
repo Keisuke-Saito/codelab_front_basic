@@ -1,0 +1,51 @@
+@charset "UTF-8";
+* {
+  /* 要素の幅（width）と高さ（height）の中にpaddingとborderを含める指定
+  レイアウト調整が楽になる
+  */
+  box-sizing: border-box;
+}
+
+.wrap {
+  width:calc(950/1280*100%);
+  /*
+  以下の指定もよく使用する
+  最大幅 max-witdh: 1000px;
+  最小幅 min-width: 1000px;
+  */
+  margin: 100px auto;
+}
+
+.box {
+  float: left;
+  border:3px solid #ccc;
+  background: wheat;
+  width: calc(94%/4);
+  height: 200px;
+  /* 親要素に対して2% ×3(余白の数) = 6%
+  widthの94% + margin 6%
+  で親要素の100%となるため、横並びが維持される */
+  margin-right: 2%;
+}
+
+/* 最後の要素はmarginを適用させない */
+.box:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width:376px) and (max-width:768px) {
+  .box {
+    width: calc(98%/2);
+    margin-bottom: 2%;
+  }
+  .box:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .box {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+}
