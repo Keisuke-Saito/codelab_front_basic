@@ -1,0 +1,68 @@
+@charset "utf-8";
+.container {
+  margin: 100px;
+}
+
+.anime {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background:red;
+  animation: anime 4s ease-in-out infinite;
+}
+
+@keyframes anime {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.q1 {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  margin: 100px auto;
+  animation:3s linear infinite rotation;
+}
+
+@keyframes rotation {
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(360deg);}
+}
+
+.q2 {
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
+  background: green;
+
+}
+
+.q2:hover {
+  transition: 2s ease-out;
+  width: 500px;
+}
+
+.q3 {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  margin: 100px auto;
+}
+
+.q3:hover {
+  transform:translateX(300px);
+  transition: 2s ease-in-out;
+}
