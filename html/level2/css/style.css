@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.wrapper {
+  max-width: 1440px;
+  min-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* **メニューバー** */
+
+.menubar {
+  width: 25%;
+  background-color: #069;
+  float: left;
+  padding-bottom: 32768px;
+  margin-bottom: -32768px;
+}
+
+.menu_logo {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.menu_logo h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.nav {
+  padding: 0 100px;
+  text-align: left;
+}
+
+.nav a {
+  color: white;
+}
+
+.nav li {
+  padding: 20px 0;
+}
+
+/* **メインコンテンツ** */
+
+/* **Welcome to Neaty Design** */
+
+.header_img img {
+  width: 75%;
+  float: right;
+}
+
+main {
+  width: 75%;
+  padding: 50px;
+  float: right;
+}
+
+.topic h1 {
+  font-size: 50px;
+  color: #069;
+}
+
+.topic p {
+  padding: 50px 0;
+}
+
+/* **About the team** */
+
+.description_img {
+  width: 30%;
+  float: left;
+  padding-right: 50px;
+}
+
+.description_img img {
+  width: 100%;
+}
+
+.description_text {
+  width: 70%;
+  float: right;
+}
+
+h2 {
+  font-size: 40px;
+  color: #069;
+  padding-bottom: 1.5rem;
+}
+
+.description_text p {
+  padding-bottom: 10px;
+}
+
+.btn {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #069;
+}
+
+.btn a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+/* **ギャラリー** */
+
+.gallery {
+  padding-top: 50px;
+  clear: both;
+}
+
+.contents {
+  margin-bottom: 100px;
+}
+
+.photo {
+  display: flex;
+}
+
+.photo img:not(:last-child) {
+  padding-right: 10px;
+}
+
+.img_1 img {
+  width:20%;
+}
+
+.img_2 img {
+  width: calc(1/3*100%);
+}
+
+.img_3 img {
+  width: 25%;
+}
+
+/* **お問い合わせフォーム** */
+
+.form {
+  width: 50%;
+  float: left;
+  padding-right: 50px;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid #008BBB;
+  padding: 0.3rem;
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  width: 100%;
+  border: 1px solid #008BBB;
+  padding: 0.3rem;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #008BBB;
+  padding: 0.3rem;
+  resize: none;
+}
+
+input::placeholder {
+  color: #008BBB;
+}
+
+textarea::placeholder {
+  color: #008BBB;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #069;
+  border: none;
+  color: white;
+}
+
+.contact_text p {
+  width: 50%;
+  margin-bottom: 10px;
+  float: right;
+}
+
+/* **フッター** */
+
+footer {
+  width: 75%;
+  padding: 50px;
+  float: right;
+}
