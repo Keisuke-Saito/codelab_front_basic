@@ -8,7 +8,7 @@ a {
 
 .wrapper {
   max-width: 1366px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 /* **ヘッダー** */
@@ -43,6 +43,9 @@ a {
 
 /* **メイン** */
 
+.slide {
+  margin: 0 calc(50% - 50vw);
+}
 
 .article {
   width: 80%;
