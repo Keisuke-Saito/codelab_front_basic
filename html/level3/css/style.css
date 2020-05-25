@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* **ヘッダー** */
+/* タイトル部分 */
+
+header {
+  background: #858585;
+}
+
+.header_box {
+  width: 980px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site_title {
+  color: white;
+}
+
+.site_title h1 {
+  font-size: 24px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.site_title span {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+/* SNSシェア */
+
+.sns {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.sns h1 {
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+.sns nav ul {
+  display: flex;
+}
+
+.sns nav ul li {
+  width: 32px;
+  height: 32px;
+  margin-right: 3px;
+  background: url(../img/sprite.png)
+}
+
+.sns nav ul li {
+  transition: .3s;
+}
+/* :hoverなしにするとマウスアウト時も変化する */
+
+
+.sns nav ul li:first-child:hover {
+  background-position: 0 -32px;
+}
+
+.sns nav ul li:last-child {
+  background-position: -32px 0;
+}
+
+.sns nav ul li:last-child:hover {
+  background-position: -32px -32px;
+}
+
+.main:before {  /* 上段ギザギザ */
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -6px;
+  width: 100%;
+  height: 10px;
+  background-image: url(../img/bg_giza.png);
+  background-position: 0 -17px;
+}
+
+/* **メイン** */
+
+.main {
+  background: url(../img/bg_tekusu.jpg) repeat;
+}
+
+.main_box {
+  width: 980px;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.main_contents {
+  width: 55%;
+  order: 1;
+}
+
+.main_contents h2 {
+  font-size: 24px;
+  line-height: 22px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.main_contents span {
+  font-size: 12px;
+}
+
+.main_contents img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sub_title {
+  display: flex;
+  margin: 20px 0;
+}
+
+.title_bar {
+  width: 5px;
+  height: 24px;
+  background: black;
+}
+
+.sub_title h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+/* 左カラム */
+
+.left_side {
+  width: 20%;
+  padding-right: 30px;
+  order: 0;
+}
+
+.login {
+  display: flex;
+  padding: 10px;
+  background: white;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  background: url(../img/sprite.png);
+}
+
+.login_icon {
+  background-position: -64px -32px;
+}
+
+h4 {
+  font-weight: bold;
+  line-height: 32px;
+  padding: 0 5px;
+}
+
+h5 {
+  margin-top: 10px;
+}
+
+.search {
+  padding: 10px;
+  background: white;
+}
+
+.search_icon {
+  display: inline-block;
+  background-position: -64px 0;
+  vertical-align: middle;
+}
+
+input[type="text"] {
+  width: 60%;
+  font-size: 10px;
+  padding: 5px;
+  vertical-align: middle;
+  border: none;
+}
+
+input[type="text"]:focus {
+  border: solid 2px #6495ED;
+  border-radius: 2px;
+  box-shadow: 0 0 1px 1px #B0C4ED, 0 0 1px 1px #B0C4ED inset;
+  outline: none;
+}
+
+.category ul li {
+  padding: 10px;
+  margin-bottom: 3px;
+  font-weight: bold;
+  background: white;
+}
+
+/* 右カラム */
+
+.right_side {
+  width: 25%;
+  padding-left: 30px;
+  order: 2;
+}
+
+.right_side h6 {
+  padding: 10px 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.right_side p {
+  line-height: 14px;
+}
+
+.ranking {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px 0;
+  background: white;
+}
+
+.ranking_icon {
+  background-position: -96px 0;
+}
+
+.rank {
+  margin-bottom: 20px;
+}
+
+.rank ul li {
+  padding: 5px;
+  margin-bottom: 5px;
+  background: white;
+}
+
+.rank ul li p {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 20px;
+}
+
+.guide ul li {
+  padding: 5px 30px;
+  margin-bottom: 3px;
+  background: white;
+}
+
+.main:after {  /* 下段ギザギザ */
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 8px;
+  width: 100%;
+  height: 10px;
+  background-image: url(../img/bg_giza.png);
+  background-position: 0 -27px;
+}
+
+/* **フッター** */
+
+footer {
+  background: #858585;
+}
+
+.footer_box {
+  width: 980px;
+  margin: 0 auto;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
