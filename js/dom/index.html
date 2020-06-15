@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS問題ドリル(DOM編)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" style="margin: 50px;">
+      <h2>JS問題ドリル(DOM編)</h2>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題1：要素の取得</div>
+        <div class="col-sm-8">
+          <p id="txt1">テキストテキストテキストテキスト</p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題2：テキストの取得<br>問題3：テキストの書き換え</div>
+        <div class="col-sm-8">
+          <div id="txt2">
+            <p>書き換え前</p>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題4：イベント(クリック)</div>
+        <div class="col-sm-8">
+          <p id="txt3">Hello world!!</p>
+          <button id="btn1">取得</button>
+          <p id="txt4">ここに表示</p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題5：イベント(サブミット) / フォーム部品の取得(テキスト)</div>
+        <div class="col-sm-8">
+          <form action="" id="form1">
+            テキスト：<input type="text" id="input1" value="JavaScript">
+            <br>
+            <input type="submit" value="送信">
+          </form>
+          <p id="txt5"></p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題6：フォーム部品の取得(セレクトボックス)</div>
+        <div class="col-sm-8">
+          <form action="" id="form2">
+            <select name="item1">
+              <option value="日本">日本</option>
+              <option value="アメリカ">アメリカ</option>
+              <option value="イギリス">イギリス</option>
+              <option value="フランス">フランス</option>
+            </select>
+            <br>
+            <input type="submit" value="送信">
+          </form>
+          <p id="result1">ここに表示</p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題7：フォーム部品の取得(チェックボックス)</div>
+        <div class="col-sm-8">
+          <form action="" id="form3">
+              <input type="checkbox" name="check" value="HTML">HTML
+              <input type="checkbox" name="check" value="CSS">CSS
+              <input type="checkbox" name="check" value="JavaScript">JavaScript
+            <br>
+            <input type="submit" value="送信">
+          </form>
+          <p id="result2">ここに表示</p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題8：フォーム部品の取得(ラジオ)</div>
+        <div class="col-sm-8">
+          <form action="" id="form4">
+              <input type="radio" name="radio" value="Ruby">Ruby
+              <input type="radio" name="radio" value="Python">Python
+              <input type="radio" name="radio" value="PHP">PHP
+            <br>
+            <input type="submit" value="送信">
+          </form>
+          <p id="result3">ここに表示</p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題9：バリデーションチェック</div>
+        <div class="col-sm-8">
+            <form action="" id="form5">
+              会社名：<input type="text" name="company">
+              <input type="submit" value="送信">
+            </form>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題10：CSSの操作</div>
+        <div class="col-sm-8">
+          <p id="txt6">スタイル変更</p>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題11：ノード追加 / 問題12：ノード削除</div>
+        <div class="col-sm-8">
+          <div id="parent"></div>
+          <button id="btn2">追加</button>
+          <button id="btn3">削除</button>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題13：属性取得・変更</div>
+        <div class="col-sm-8">
+          <a id="link1" href="https://www.google.com" target="_blank">リンク</a>
+          <button id="btn4">変更</button>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題14：クエリーセレクター / カスタム属性 / this</div>
+        <div class="col-sm-8">
+          <ul id="list1">
+            <li data-num="1">item1</li>
+            <li data-num="2">item2</li>
+            <li data-num="3">item3</li>
+            <li data-num="4">item4</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4">問題15：クラスの操作</div>
+        <div class="col-sm-8">
+          <p id="txt7">テキスト</p>
+          <button id="btn5">追加</button>
+          <button id="btn6">削除</button>
+          <button id="btn7">付け替え</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="question.js"></script>
+</body>
+</html>
