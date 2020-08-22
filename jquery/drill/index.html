@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQuery問題ドリル</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="question.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" style="margin: 50px;">
+    <h2>jQuery問題ドリル</h2>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">例題：要素セレクター</div>
+      <div class="col-sm-8">
+          <h3>色を赤色に変えます</h3>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題1：要素セレクター</div>
+      <div class="col-sm-8">
+          <h4>色を赤色に変えます</h4>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題2：IDセレクター</div>
+      <div class="col-sm-8">
+        <ul>
+          <li>item1</li>
+          <li id="q2">item2</li>
+          <li>item3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題3：クラスセレクター</div>
+      <div class="col-sm-8">
+        <ul>
+          <li class="q3">item1</li>
+          <li class="q3">item2</li>
+          <li class="q3">item3</li>
+          <li>item4</li>
+          <li class="q3">item5</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題4：子孫セレクター</div>
+      <div class="col-sm-8">
+        <ul>
+          <li class="q4"><span>テキスト</span>テキスト</li>
+          <li><span>テキスト</span>テキスト</li>
+          <li class="q4"><span>テキスト</span>テキスト</li>
+          <li><span>テキスト</span>テキスト</li>
+          <li class="q4"><span>テキスト</span>テキスト</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題5：グループセレクター</div>
+      <div class="col-sm-8">
+        <ul>
+          <li id="q50"><span>テキスト</span>テキスト</li>
+          <li><span>テキスト</span>テキスト</li>
+          <li id="q51"><span>テキスト</span>テキスト</li>
+          <li><span>テキスト</span>テキスト</li>
+          <li id="q52"><span>テキスト</span>テキスト</li>
+          </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題6：子セレクター</div>
+      <div class="col-sm-8">
+        <p class="q6"><span>テキスト</span>テキスト</p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題7：隣接セレクター</div>
+      <div class="col-sm-8">
+        <ul>
+          <li class="q7">item1</li>
+          <li>item2</li>
+          <li>item3</li>
+          <li>item4</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題8：first-child</div>
+      <div class="col-sm-8">
+        <ul class="q8">
+          <li>item1</li>
+          <li>item2</li>
+          <li>item3</li>
+          <li>item4</li>
+        </ul>
+        <ul class="q8" style="margin-top: 30px;">
+          <li>item1</li>
+          <li>item2</li>
+          <li>item3</li>
+          <li>item4</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題9：間接セレクター</div>
+      <div class="col-sm-8">
+        <p>テキスト</p>
+        <div class="q9">item1</div>
+        <p>テキスト</p>
+        <p>テキスト</p>
+        <p>テキスト</p>
+        <p>テキスト</p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題10：否定疑似クラス</div>
+      <div class="col-sm-8">
+        <ul class="q10">
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題11：empty疑似クラス</div>
+      <div class="col-sm-8">
+        <ul class="q11">
+          <li>テキスト</li>
+          <li></li>
+          <li>テキスト</li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題12：nth-child疑似クラス</div>
+      <div class="col-sm-8">
+        <ul class="q12">
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題13：last-child疑似クラス</div>
+      <div class="col-sm-8">
+        <ul class="q13">
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題14：only-child疑似クラス</div>
+      <div class="col-sm-8">
+        <ul class="q14">
+          <li>テキスト<span>テキスト</span></li>
+          <li>テキスト<span>テキスト</span><span>テキスト</span></li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題15：nth-last-child疑似クラス</div>
+      <div class="col-sm-8">
+        <ul class="q15">
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題16：nth-of-type疑似クラス</div>
+      <div class="col-sm-8">
+        <dl class="q16">
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題17：nth-last-of-type疑似クラス</div>
+      <div class="col-sm-8">
+        <dl class="q17">
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題18：first-of-type疑似クラス</div>
+      <div class="col-sm-8">
+        <dl class="q18">
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題19：last-of-type疑似クラス</div>
+      <div class="col-sm-8">
+        <dl class="q19">
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題20：only-of-type疑似クラス</div>
+      <div class="col-sm-8">
+        <dl class="q20">
+          <dt>dtdt</dt>
+          <dd>dddd</dd>
+          <dd>dddd</dd>
+          <dd>dddd</dd>
+          <dd>dddd</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題21：特定の属性</div>
+      <div class="col-sm-8">
+        <ul class="q21">
+          <li id="q21one">item</li>
+          <li class="q21list">item</li>
+          <li id="q21thrid">item</li>
+          <li class="q21list">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題22：特定の属性値</div>
+      <div class="col-sm-8">
+        <ul class="q22">
+          <li>item</li>
+          <li class="q22item">item</li>
+          <li>item</li>
+          <li class="q22item">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題23：特定の属性値を持たない</div>
+      <div class="col-sm-8">
+        <ul class="q23">
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li class="q23item">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題24：特定の属性値で始まっている</div>
+      <div class="col-sm-8">
+        <ul class="q24">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題25：特定の属性値で終わっている</div>
+      <div class="col-sm-8">
+        <ul class="q25">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題26：特定の属性値を含んでいる</div>
+      <div class="col-sm-8">
+        <ul class="q26">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題27：複数の属性セレクターに該当する</div>
+      <div class="col-sm-8">
+        <ul class="q27">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題28：firstセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q28">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+        <ul class="q28">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題29：lastセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q29">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+        <ul class="q29">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題30：evenセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q30">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+        <ul class="q30">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題31：oddセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q31">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+        <ul class="q31">
+          <li class="one">item</li>
+          <li class="two">item</li>
+          <li class="three">item</li>
+          <li class="four">item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題32：eqセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q32">
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題33：ltセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q33">
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題34：gtセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q34">
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題35：headerセレクター</div>
+      <div class="col-sm-8">
+        <div class="q35">
+          <p>テキストテキスト</p>
+          <h1>見出し</h1>
+          <p>テキストテキスト</p>
+          <h5>見出し</h5>
+          <p>テキストテキスト</p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題36：containsセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q36">
+          <li>テキストテキストjQuery</li>
+          <li>item</li>
+          <li>itemjQueryitem</li>
+          <li>item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題37：hasセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q37">
+          <li>item</li>
+          <li><span>item</span></li>
+          <li>item</li>
+          <li>item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題38：parentセレクター</div>
+      <div class="col-sm-8">
+        <ul class="q38">
+          <li>item</li>
+          <li></li>
+          <li></li>
+          <li><span>aa</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題39：childrenメソッド</div>
+      <div class="col-sm-8">
+        <div class="q39">
+          <p>item<a>link</a></p>
+          <p>item</p>
+          <p>item</p>
+          <p>item</p>
+          <a href="">link</a>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題40：findメソッド</div>
+      <div class="col-sm-8">
+        <div class="q40">
+          <p>item<a>link</a></p>
+          <p>item</p>
+          <p>item</p>
+          <p>item</p>
+          <a href="">link</a>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題41：prevメソッド</div>
+      <div class="col-sm-8">
+        <ul class="q41">
+          <li>item</li>
+          <li>item</li>
+          <li class="pre-item">item</li>
+          <li>item</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題42：parentsメソッド</div>
+      <div class="col-sm-8">
+          <div class="q42">
+            <ul>
+              <li class="q42item">item</li>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題43：nextメソッド</div>
+      <div class="col-sm-8">
+        <h5 class="q43">見出し</h5>
+        <p>テキストテキスト</p>
+        <p>テキストテキスト</p>
+        <p>テキストテキスト</p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題44：siblingsメソッド</div>
+      <div class="col-sm-8">
+          <ul class="q44">
+            <li>item</li>
+            <li class="secound">item</li>
+            <li>item</li>
+            <li>item</li>
+          </ul>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題45：attrメソッド</div>
+      <div class="col-sm-8">
+          <p class="q45"><a href="https://webe.holdings/" target="_blank">code lab.</a></p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題46：dataメソッド、textメソッド</div>
+      <div class="col-sm-8">
+        <p class="q46" data-num="3"></p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題47：要素を先頭に挿入 prependメソッド</div>
+      <div class="col-sm-8">
+        <div class="q47">
+          <p>先頭</p>
+          <p>てきすとてきすと</p>
+          <p>てきすとてきすと</p>
+          <p>てきすとてきすと</p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題48：要素を最後に挿入 appendメソッド</div>
+      <div class="col-sm-8">
+          <div class="q48">
+            <p>先頭</p>
+            <p>てきすとてきすと</p>
+            <p>てきすとてきすと</p>
+            <p>てきすとてきすと</p>
+          </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題49：要素の置き換え replaceWithメソッド</div>
+      <div class="col-sm-8">
+          <div class="q49">
+            <p>テキストテキスト</p>
+          </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題50：要素の削除 removeメソッド</div>
+      <div class="col-sm-8">
+        <div class="q50">
+          <p>テキストテキスト</p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題51：クラス属性の追加 addClassメソッド</div>
+      <div class="col-sm-8">
+        <div class="q51">
+          <p>テキストテキスト</p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題52：クラス属性の削除 removeClassメソッド</div>
+      <div class="col-sm-8">
+        <div class="q52">
+          <p class="red">テキストテキスト</p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題53：メソッドチェーン</div>
+      <div class="col-sm-8">
+        <div class="q53">
+          <p>テキストテキスト</p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-sm-4">問題54：イベント click</div>
+      <div class="col-sm-8">
+        <div class="q54">
+          <button>ボタン</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
