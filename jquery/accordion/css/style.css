@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.ttl {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#accordion {
+  margin: 50px auto;
+  width: 700px;
+}
+
+#accordion > dt {
+  border-bottom: solid 1px #fff;
+  background-color: #376c39;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  font-weight: bold;
+}
+
+#accordion > dd {
+  border: solid 1px #bdb6b6;
+  margin: 0px;
+  padding: 15px;
+}
