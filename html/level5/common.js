@@ -24,17 +24,17 @@ $(function() {
 
   // アニメーション１（下線）
   setTimeout(function() {
-    $(".title p:first-of-type").css({opacity:'1'}).addClass('active2')
+    $(".title .line").css({opacity:'1'}).addClass('active2')
   },300);
 
   // アニメーション１（文章）
   setTimeout(function() {
-    $(".title p:last-of-type").css({opacity:'1'}).addClass('active2')
+    $(".title p").css({opacity:'1'}).addClass('active2')
   },400);
 
   // アニメーション２（タイトル）
   $(window).scroll(function() {
-    $("#contents1 h2").each(function() {
+    $(".contents1 h2").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -46,13 +46,13 @@ $(function() {
 
   // アニメーション２（下線）
   $(window).scroll(function() {
-    $("#contents1 .underline").each(function() {
+    $(".contents1 .line").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > position - windowHeight + 100) {
         setTimeout(function() {
-        $("#contents1 .underline").css({opacity:'1'}).addClass('active4');
+        $(".contents1 .line").css({opacity:'1'}).addClass('active4');
         },100)
       }
     });
@@ -60,13 +60,13 @@ $(function() {
 
   // アニメーション２（文章）
   $(window).scroll(function() {
-    $("#contents1 .regular_text").each(function() {
+    $(".contents1 .regular_text").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > position - windowHeight + 100) {
         setTimeout(function() {
-          $("#contents1 .regular_text").css({opacity:'1'}).addClass('active3');
+          $(".contents1 .regular_text").css({opacity:'1'}).addClass('active3');
         },200)
       }
     });
@@ -86,7 +86,7 @@ $(function() {
 
   // アニメーション５（タイトル）
   $(window).scroll(function() {
-    $("#contents5 h2").each(function() {
+    $(".contents5 h2").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -164,7 +164,7 @@ $(function() {
 
   // アニメーション６（タイトル）
   $(window).scroll(function() {
-    $("#contents6 h2").each(function() {
+    $(".contents6 h2").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -176,13 +176,13 @@ $(function() {
 
   // アニメーション６（文章）
   $(window).scroll(function() {
-    $("#contents6 .regular_text").each(function() {
+    $(".contents6 .regular_text").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > position - windowHeight + 100) {
         setTimeout(function() {
-        $("#contents6 .regular_text").css({opacity:'1'}).addClass('active7');
+        $(".contents6 .regular_text").css({opacity:'1'}).addClass('active7');
         },100)
       }
     });
@@ -190,7 +190,7 @@ $(function() {
 
   // アニメーション７（タイトル）
   $(window).scroll(function() {
-    $("#contents8 h2").each(function() {
+    $(".contents8 h2").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -202,13 +202,13 @@ $(function() {
 
   // アニメーション７（下線）
   $(window).scroll(function() {
-    $("#contents8 .underline").each(function() {
+    $(".contents8 .line").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > position - windowHeight + 100) {
         setTimeout(function() {
-        $("#contents8 .underline").css({opacity:'1'}).addClass('active8');
+        $(".contents8 .line").css({opacity:'1'}).addClass('active8');
         },100)
       }
     });
@@ -216,13 +216,13 @@ $(function() {
 
   // アニメーション７（文章）
   $(window).scroll(function() {
-    $("#contents8 .regular_text").each(function() {
+    $(".contents8 .regular_text").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > position - windowHeight + 100) {
         setTimeout(function() {
-        $("#contents8 .regular_text").css({opacity:'1'}).addClass('active8');
+        $(".contents8 .regular_text").css({opacity:'1'}).addClass('active8');
         },200)
       }
     });
@@ -230,7 +230,7 @@ $(function() {
 
   // アニメーション９（タイトル）
   $(window).scroll(function() {
-    $("#contents10 h2").each(function() {
+    $(".contents10 h2").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -242,13 +242,13 @@ $(function() {
 
   // アニメーション９（下線）
   $(window).scroll(function() {
-    $("#contents10 .underline").each(function() {
+    $(".contents10 .line").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > position - windowHeight + 100) {
         setTimeout(function() {
-        $("#contents10 .underline").css({opacity:'1'}).addClass('active3');
+        $(".contents10 .line").css({opacity:'1'}).addClass('active3');
         },100)
       }
     });
@@ -256,13 +256,13 @@ $(function() {
 
   // アニメーション９（文章）
   $(window).scroll(function() {
-    $("#contents10 .regular_text").each(function() {
+    $(".contents10 .regular_text").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > position - windowHeight + 100) {
         setTimeout(function() {
-        $("#contents10 .regular_text").css({opacity:'1'}).addClass('active3');
+        $(".contents10 .regular_text").css({opacity:'1'}).addClass('active3');
         },200)
       }
     });
@@ -270,7 +270,7 @@ $(function() {
 
   // アニメーション１０（左）
   $(window).scroll(function() {
-    $("#adress").each(function() {
+    $(".adress").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -282,7 +282,7 @@ $(function() {
 
   // アニメーション１０（右）
   $(window).scroll(function() {
-    $("#form_container").each(function() {
+    $(".form_container").each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
