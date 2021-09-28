@@ -13,13 +13,13 @@ class UserManagement extends \Bbs\Controller {
     $users = $userAll->getUsersAll();
     // var_dump($users);
     // exit();
-    foreach($users as $key => $value):
-      $this->setValues('id', $key->value);
-      $this->setValues('username', $key->value);
-      $this->setValues('email', $key->value);
-      $this->setValues('image', $key->value);
-      $this->setValues('authority', $key->value);
-      $this->setValues('delflag', $key->value);
+    foreach($users as $user):
+      $this->setValues('id', $user->id);
+      $this->setValues('username', $user->username);
+      $this->setValues('email', $user->email);
+      $this->setValues('image', $user->image);
+      $this->setValues('authority', $user->authority);
+      $this->setValues('delflag', $user->delflag);
     endforeach;
   }
 

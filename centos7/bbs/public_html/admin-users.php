@@ -2,8 +2,8 @@
 require_once(__DIR__ .'/header.php');
 $app = new Bbs\Controller\UserManagement();
 $app->run();
-var_dump($app);
-exit();
+// var_dump($app);
+// exit();
 ?>
 <h1 class="page__ttl">ユーザーテーブル管理画面</h1>
 <form action="signup-users.php" class="form-group">
@@ -28,19 +28,19 @@ exit();
           <td><input type="radio">
             <td><?= h($value->id); ?></td>
             <td>
-              <input type="text" name="username" value="<?= isset($value->getValues->username) ? h($value->getValues->username): ''; ?>">
+              <input type="text" name="username" value="<?= isset($value->getValues()->username) ? h($value->getValues()->username): ''; ?>">
             </td>
             <td>
-              <input type="text" name="email" value="<?= isset($user->getValues->email) ? h($user->getValues->email): ''; ?>">
+              <input type="text" name="email" value="<?= isset($value->getValues()->email) ? h($value->getValues()->email): ''; ?>">
             </td>
             <td>
-              <input type="text" name="image" value="<?= isset($user->getValues->image) ? h($user->getValues->image): ''; ?>">
+              <input type="text" name="image" value="<?= isset($value->getValues()->image) ? h($value->getValues()->image): ''; ?>">
             </td>
             <td>
-              <input type="text" name="authority" value="<?= isset($user->getValues->authority) ? h($user->authority): ''; ?>">
+              <input type="text" name="authority" value="<?= isset($value->getValues()->authority) ? h($value->getValues()->authority): ''; ?>">
             </td>
             <td>
-              <input type="text" name="delflag" value="<?= isset($user->getValues->delflag) ? h($user->getValues->delflag): ''; ?>">
+              <input type="text" name="delflag" value="<?= isset($value->getValues()->delflag) ? h($value->getValues()->delflag): ''; ?>">
             </td>
           </td>
         </tr>
