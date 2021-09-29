@@ -2,25 +2,23 @@
 namespace Bbs\Controller;
 class UserManagement extends \Bbs\Controller {
   public function run() {
-    $this->userList();
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $this->managementUser();
     }
   }
 
-  protected function userList() {
+  public function getUsersAll() {
     $userAll = new \Bbs\Model\User();
     $users = $userAll->getUsersAll();
+    return $users;
     // var_dump($users);
     // exit();
-    foreach($users as $user):
-      $this->setValues('id', $user->id);
-      $this->setValues('username', $user->username);
-      $this->setValues('email', $user->email);
-      $this->setValues('image', $user->image);
-      $this->setValues('authority', $user->authority);
-      $this->setValues('delflag', $user->delflag);
-    endforeach;
+    // $this->setValues('id', $users->id);
+    // $this->setValues('username', $users->username);
+    // $this->setValues('email', $users->email);
+    // $this->setValues('image', $users->image);
+    // $this->setValues('authority', $users->authority);
+    // $this->setValues('delflag', $users->delflag);
   }
 
   protected function managementUser() {
@@ -80,3 +78,43 @@ class UserManagement extends \Bbs\Controller {
     }
   }
 }
+
+
+
+// object(Bbs\Controller\UserManagement)#3 (2) {
+//   ["errors":"Bbs\Controller":private]=> object(stdClass)#4 (0) {
+//   }
+//   ["values":"Bbs\Controller":private]=> object(stdClass)#5 (6) {
+//     ["id"]=> string(2) "17"
+//     ["username"]=> string(9) "管理者"
+//     ["email"]=> string(14) "admin@test.com"
+//     ["image"]=> NULL
+//     ["authority"]=> string(2) "99"
+//     ["delflag"]=> string(1) "0"
+//   }
+// }
+
+// array(3)
+// { [0]=> object(stdClass)#9 (6) {
+//    ["id"]=> string(1) "2"
+//    ["username"]=> string(12) "ああああ"
+//    ["email"]=> string(25) "j27e4dd7c5577v3@gmail.com"
+//    ["image"]=> string(21) "img_60cf55ded68b7.png"
+//    ["authority"]=> string(1) "1"
+//    ["delflag"]=> string(1) "0"
+//   } [1]=> object(stdClass)#10 (6) {
+//     ["id"]=> string(2) "13"
+//     ["username"]=> string(12) "いいいい"
+//     ["email"]=> string(27) "j27e4dd7c5577v3@ezweb.ne.jp"
+//     ["image"]=> string(21) "img_60c9bd7e9907e.jpg"
+//     ["authority"]=> string(1) "1"
+//     ["delflag"]=> string(1) "1"
+//   } [2]=> object(stdClass)#11 (6) {
+//     ["id"]=> string(2) "17"
+//     ["username"]=> string(9) "管理者"
+//     ["email"]=> string(14) "admin@test.com"
+//     ["image"]=> NULL
+//     ["authority"]=> string(2) "99"
+//     ["delflag"]=> string(1) "0"
+//   }
+// }
